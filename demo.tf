@@ -3,6 +3,13 @@
 
 # Create VCN
 
+variable "compartment_ocid" {
+    default = "ocid1.compartment.oc1..aaaaaaaaatvqndqfls2ufvtsrwff7ikepddfj4ks3okdyytqcmymqsqk6rpa"
+}
+variable "region" {
+    default = "us-ashburn-1"
+}
+
 resource "oci_core_virtual_network" "vcn" {
   cidr_block = "10.0.0.0/16"
   compartment_id = var.compartment_ocid
