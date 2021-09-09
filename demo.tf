@@ -5,10 +5,6 @@ variable "bucket_name" {
     default = "resource_manager_demo_bucket"
 }
 
-provider "oci" {
-    region = var.region
-}
-
 resource "oci_objectstorage_bucket" "create_bucket" {
     # required
     compartment_id = var.compartment_ocid
