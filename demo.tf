@@ -6,7 +6,7 @@
 resource "oci_core_virtual_network" "vcn" {
   cidr_block = "10.0.0.0/16"
   compartment_id = var.compartment_ocid
-  display_name = "demo-vcn"
+  display_name = "vcn-demo-test"
 #  dns_label      = "tfexamplevcn"
 }
 
@@ -68,7 +68,7 @@ resource "oci_core_virtual_network" "vcn" {
 
 resource "oci_core_subnet" "subnet_1" {
   cidr_block = "10.0.1.0/24"
-  display_name = "subnet-1"
+  display_name = "subnet-demo-test"
   compartment_id = var.compartment_ocid
   vcn_id = oci_core_virtual_network.vcn.id
   dhcp_options_id = oci_core_virtual_network.vcn.default_dhcp_options_id
